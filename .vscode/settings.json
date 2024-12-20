@@ -22,7 +22,6 @@
         "*.REXXINC*": "rexx",
         "*.rex": "rexx",
         "*.rexx": "rexx",
-        "iostream": "cpp",
-        "*.tcc": "cpp"
+        "typeinfo": "cpp"
     }
 }
