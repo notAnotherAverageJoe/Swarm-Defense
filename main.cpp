@@ -11,5 +11,7 @@ int main()
     Swarm swarm1("BileGuts", 10, 20);
     std::cout << "Welcome to Swarm Base Defense!" << std::endl;
 
-    return 0;
+        return 0;
 }
+
+//    g++ main.cpp turret.cpp enemy.cpp -o main
