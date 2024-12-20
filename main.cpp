@@ -1,5 +1,6 @@
 #include "include/turret.h"
 #include "include/enemy.h"
+#include "include/base.h"
 
 int main()
 {
@@ -9,7 +10,11 @@ int main()
 
     // creatior for swarm and add turrets
     Swarm swarm1("BileGuts", 10, 20);
+
+    std::string baseName;
     std::cout << "Welcome to Swarm Base Defense!" << std::endl;
+    std::cout << "Alright commander let's make your base -> ";
+    std::getline(std::cin, baseName);
 
     return 0;
 }

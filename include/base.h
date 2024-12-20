@@ -12,7 +12,7 @@ private:
 
 public:
     Base(const std::string &baseName, int baseHealth);
-    // add methods
+    void status();
 };
 
 #endif
