@@ -16,7 +16,10 @@ int main()
     std::cout << "Alright commander let's make your base -> ";
     std::getline(std::cin, baseName);
 
+    Base mainBase(baseName, 100);
+    mainBase.status();
+
     return 0;
 }
 
-//    g++ main.cpp turret.cpp enemy.cpp -o main
+//    g++ main.cpp turret.cpp enemy.cpp base.cpp -o main
