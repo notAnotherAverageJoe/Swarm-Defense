@@ -5,5 +5,5 @@ Base::Base(const std::string &baseName, int baseHealth) : name(baseName), health
 void Base::status()
 {
     std::cout << "Base: " << name << "\n"
-              << "Status: " << health << std::endl;
+              << "Health Status: " << health << std::endl;
 }
