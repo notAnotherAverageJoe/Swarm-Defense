@@ -3,11 +3,11 @@
 
 int main()
 {
-    // Create individual turrets
+    // creation for individual turrets
     Turret turret1("Ironside", 100, 100);
     Turret turret2("Steelclad", 80, 120);
 
-    // Create a swarm and add turrets
+    // creatior for swarm and add turrets
     Swarm swarm1("BileGuts", 10, 20);
     std::cout << "Welcome to Swarm Base Defense!" << std::endl;
 
