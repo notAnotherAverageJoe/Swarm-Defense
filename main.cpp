@@ -31,6 +31,21 @@ int main()
 
         int choice;
         std::cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            mainBase.status();
+            break;
+        case 2:
+            std::cout << "upgrade facility coming soon" << std::endl;
+            break;
+        case 3:
+            std::cout << "Swarm incorporation coming soon" << std::endl;
+            break;
+        case 4:
+            std::cout << "Goodbye commander! long live " << baseName << std::endl;
+        }
     }
 
     return 0;
