@@ -38,13 +38,17 @@ int main()
             mainBase.status();
             break;
         case 2:
-            std::cout << "upgrade facility coming soon" << std::endl;
+            std::cout << "upgrade facility coming soon\n\n"
+                      << std::endl;
             break;
         case 3:
-            std::cout << "Swarm incorporation coming soon" << std::endl;
+            std::cout << "Swarm incorporation coming soon\n\n"
+                      << std::endl;
             break;
         case 4:
-            std::cout << "Goodbye commander! long live " << baseName << std::endl;
+            std::cout << "Goodbye commander! long live " << baseName << "\n\n"
+                      << std::endl;
+            gameStart = false;
             break;
         }
     }
