@@ -45,6 +45,7 @@ int main()
             break;
         case 4:
             std::cout << "Goodbye commander! long live " << baseName << std::endl;
+            break;
         }
     }
 
