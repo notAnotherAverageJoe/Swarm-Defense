@@ -19,6 +19,20 @@ int main()
     Base mainBase(baseName, 100);
     mainBase.status();
 
+    bool gameStart = true;
+    while (gameStart)
+    {
+        std::cout << "Welcome back commander" << std::endl;
+        std::cout << "Choose an action:\n";
+        std::cout << "1. Check base status\n";
+        std::cout << "2. Upgrade a turret\n";
+        std::cout << "3. Attack swarm\n";
+        std::cout << "4. Exit game\n";
+
+        int choice;
+        std::cin >> choice;
+    }
+
     return 0;
 }
 
