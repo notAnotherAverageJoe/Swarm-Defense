@@ -53,14 +53,22 @@ int main()
         case 2:
         {
             int choice;
-            std::cout << "What would you like to do?\n";
-            "1. Build a turret\n";
-            "2. Check turret status a turret\n";
-            "3. Exit armory\n";
+            std::cout << "What would you like to do?"
+                      << std::endl;
+            std::cout << "1. Build a turret\n";
+            std::cout << "2. Check turret status a turret\n";
+            std::cout << "3. Exit armory\n";
             std::cin >> choice;
             switch (choice)
             {
             case 1:
+                break;
+
+            case 2:
+                for (int i = 0; i < turretLocker.size(); i++)
+                {
+                    turretLocker[i].turretStatus();
+                }
                 break;
             }
 
