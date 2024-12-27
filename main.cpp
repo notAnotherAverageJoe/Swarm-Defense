@@ -31,6 +31,8 @@ int main()
 
         int choice;
         std::cin >> choice;
+        if (choice < 1 || choice > 5)
+            break;
 
         switch (choice)
         {
