@@ -5,8 +5,8 @@
 int main()
 {
     // creation for individual turrets
-    Turret turret1("Ironside", 100, 100);
-    Turret turret2("Steelclad", 80, 120);
+    Turret turret1("Ironside", 100, 100, 100);
+    Turret turret2("Steelclad", 80, 120, 100);
 
     // creatior for swarm and add turrets
     Swarm swarm1("BileGuts", 10, 20);
@@ -25,7 +25,7 @@ int main()
         std::cout << "Welcome back commander" << std::endl;
         std::cout << "Choose an action:\n";
         std::cout << "1. Check base status\n";
-        std::cout << "2. Upgrade a turret\n";
+        std::cout << "2. Build a turret\n";
         std::cout << "3. Attack swarm\n";
         std::cout << "4. Exit game\n";
 
@@ -33,6 +33,7 @@ int main()
         std::cin >> choice;
         if (choice < 1 || choice > 5)
             break;
+        std::string turretN;
 
         switch (choice)
         {
@@ -40,6 +41,9 @@ int main()
             mainBase.status();
             break;
         case 2:
+
+            std::cout << "Enter a name for your turret: ";
+            std::getline(std::cin, baseName);
             std::cout << "upgrade facility coming soon\n\n"
                       << std::endl;
             break;

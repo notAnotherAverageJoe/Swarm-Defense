@@ -16,7 +16,11 @@ void Turret::creation()
 
 void Turret::turretStatus()
 {
-    std::cout << "Turret Name: " << name << ""
+    std::cout << "Turret Name: " << name << "\n"
+              << "Current Ammo: " << ammo << "\n"
+              << "Turret Health: " << health << "\n"
+              << "Turret Range: " << range << "\n"
+              << std::endl;
 }
 
 // g++ turret.cpp - o turret
