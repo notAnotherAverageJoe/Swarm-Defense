@@ -31,37 +31,29 @@ int main()
 
         int choice;
         std::cin >> choice;
-        if (choice < 1 | choice > 4)
+
+        switch (choice)
         {
-            std::cout << "Invalid option ---> Choose 1 - 4" << std::endl;
+        case 1:
+            mainBase.status();
+            break;
+        case 2:
+            std::cout << "upgrade facility coming soon\n\n"
+                      << std::endl;
+            break;
+        case 3:
+            std::cout << "Swarm incorporation coming soon\n\n"
+                      << std::endl;
+            break;
+        case 4:
+            std::cout << "Goodbye commander! long live " << baseName << "\n\n"
+                      << std::endl;
+            gameStart = false;
             break;
         }
-        else
-        {
-
-            switch (choice)
-            {
-            case 1:
-                mainBase.status();
-                break;
-            case 2:
-                std::cout << "upgrade facility coming soon\n\n"
-                          << std::endl;
-                break;
-            case 3:
-                std::cout << "Swarm incorporation coming soon\n\n"
-                          << std::endl;
-                break;
-            case 4:
-                std::cout << "Goodbye commander! long live " << baseName << "\n\n"
-                          << std::endl;
-                gameStart = false;
-                break;
-            }
-        }
-
-        return 0;
     }
+
+    return 0;
 }
 
 //    g++ main.cpp turret.cpp enemy.cpp base.cpp -o main
