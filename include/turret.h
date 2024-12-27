@@ -10,10 +10,13 @@ private:
     std::string name;
     int ammo;
     int health;
+    int range;
 
 public:
-    Turret(const std::string &turretName, int turretAmmo, int turretHealth);
+    Turret(const std::string &turretName, int turretAmmo, int turretHealth, int turretRange);
     void fire();
+    void creation();
+    void turretStatus();
 };
 
 #endif // TURRET_H
