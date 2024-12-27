@@ -15,7 +15,7 @@ private:
 public:
     Turret(const std::string &turretName, int turretAmmo, int turretHealth, int turretRange);
     void fire();
-    void creation();
+    Turret creation();
     void turretStatus();
 };
 

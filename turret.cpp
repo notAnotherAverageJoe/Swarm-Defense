@@ -8,12 +8,22 @@ void Turret::fire()
     std::cout << name << " begins shooting" << std::endl;
 }
 
-void Turret::creation()
+Turret Turret::creation()
 {
-    std::cout << name << " Has been created!\n"
-              << std::endl;
-}
+    std::string turName;
+    std::cout << "Enter a turret name: ";
+    std::getline(std::cin, turName);
+    Turret newTurrets(turName, 100, 100, 20);
 
+    std::cout << "Turret Name: " << name << "\n"
+              << "Current Ammo: " << ammo << "\n"
+              << "Turret Health: " << health << "\n"
+              << "Turret Range: " << range << "\n"
+              << std::endl;
+
+    return newTurrets;
+}
+// this may be useless in the future.
 void Turret::turretStatus()
 {
     std::cout << "Turret Name: " << name << "\n"

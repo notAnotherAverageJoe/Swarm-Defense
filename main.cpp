@@ -27,6 +27,7 @@ int main()
               << "Enter a name for your turret: ";
     std::getline(std::cin, turretNames);
     Turret newTurret(turretNames, 100, 100, 20);
+    newTurret.turretStatus();
     turretLocker.push_back(newTurret);
 
     bool gameStart = true;
@@ -60,6 +61,7 @@ int main()
             switch (choice)
             {
             case 1:
+                break;
             }
 
             std::cout
