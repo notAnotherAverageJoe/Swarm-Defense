@@ -25,7 +25,7 @@ int main()
     std::cout << "Alright commander let's make your base -> ";
     std::getline(std::cin, baseName);
 
-    Base mainBase(baseName, 100);
+    Base mainBase(baseName, 60);
     mainBase.status();
     spaces();
 
@@ -100,7 +100,11 @@ int main()
                     turretLocker[i].turretStatus();
                 }
                 break;
-            }
+
+            case 3:
+                mainBase.repair();
+                mainBase.status();
+            };
 
             std::cout
                 << "upgrade facility coming soon\n\n"
