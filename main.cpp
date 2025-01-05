@@ -5,7 +5,7 @@
 #include <string>
 void spaces()
 {
-    std::cout << "------------" << std::endl;
+    std::cout << "----------------------------------" << std::endl;
     std::cout << "\n"
               << std::endl;
 };
@@ -27,6 +27,7 @@ int main()
 
     Base mainBase(baseName, 100);
     mainBase.status();
+    spaces();
 
     std::cout << "Turrets are your only way to defend yourself!\n"
               << "Let's make sure you have one ready!\n"
@@ -42,7 +43,6 @@ int main()
     {
         std::cout << "Welcome back commander" << std::endl;
         spaces();
-
         std::cout << "Choose an action:\n";
         std::cout << "1. Check base status\n";
         std::cout << "2. Armory\n";
@@ -64,9 +64,13 @@ int main()
             int choice;
             std::cout << "What would you like to do?"
                       << std::endl;
+            spaces();
+
             std::cout << "1. Build a turret\n";
             std::cout << "2. Check turret status a turret\n";
             std::cout << "3. Exit armory\n";
+            spaces();
+
             std::cin >> choice;
             switch (choice)
             {
@@ -77,6 +81,9 @@ int main()
                 Turret newTurret(turretNames, 100, 100, 20); // Create a new turret with specified attributes
                 newTurret.turretStatus();                    // Show turret status
                 turretLocker.push_back(newTurret);           // Add turret to the locker
+                spaces();
+                spaces();
+
                 break;
             }
             break;
@@ -92,16 +99,22 @@ int main()
             std::cout
                 << "upgrade facility coming soon\n\n"
                 << std::endl;
+            spaces();
+
             break;
         }
 
         case 3:
             std::cout << "Swarm incorporation coming soon\n\n"
                       << std::endl;
+            spaces();
+
             break;
         case 4:
             std::cout << "Goodbye commander! long live " << baseName << "\n\n"
                       << std::endl;
+            spaces();
+
             gameStart = false;
             break;
         }

@@ -13,6 +13,7 @@ private:
 public:
     Base(const std::string &baseName, int baseHealth);
     void status();
+    void repair();
 };
 
 #endif
