@@ -2,7 +2,13 @@
 #include "include/enemy.h"
 #include "include/base.h"
 #include <vector>
-
+#include <string>
+void spaces()
+{
+    std::cout << "------------" << std::endl;
+    std::cout << "\n"
+              << std::endl;
+};
 int main()
 {
     std::string turretNames;
@@ -29,11 +35,14 @@ int main()
     Turret newTurret(turretNames, 100, 100, 20);
     newTurret.turretStatus();
     turretLocker.push_back(newTurret);
+    spaces();
 
     bool gameStart = true;
     while (gameStart)
     {
         std::cout << "Welcome back commander" << std::endl;
+        spaces();
+
         std::cout << "Choose an action:\n";
         std::cout << "1. Check base status\n";
         std::cout << "2. Armory\n";
@@ -62,7 +71,15 @@ int main()
             switch (choice)
             {
             case 1:
+            {
+                std::cout << "Enter turret name: ";
+                std::getline(std::cin, turretNames);         // Get the name of the turret
+                Turret newTurret(turretNames, 100, 100, 20); // Create a new turret with specified attributes
+                newTurret.turretStatus();                    // Show turret status
+                turretLocker.push_back(newTurret);           // Add turret to the locker
                 break;
+            }
+            break;
 
             case 2:
                 for (int i = 0; i < turretLocker.size(); i++)
