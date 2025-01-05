@@ -68,15 +68,21 @@ int main()
 
             std::cout << "1. Build a turret\n";
             std::cout << "2. Check turret status a turret\n";
-            std::cout << "3. Exit armory\n";
-            spaces();
+            std::cout << "3. Repair base\n";
+            std::cout << "4. Exit armory\n";
 
-            std::cin >> choice;
+            std::cin >>
+                choice;
             switch (choice)
             {
             case 1:
             {
-                std::cout << "Enter turret name: ";
+
+                std::cout << "Enter turret name: " << std::endl;
+                if (std::cin.peek() == '\n')
+                {
+                    std::cin.get(); // Consume the newline if it exists
+                }
                 std::getline(std::cin, turretNames);         // Get the name of the turret
                 Turret newTurret(turretNames, 100, 100, 20); // Create a new turret with specified attributes
                 newTurret.turretStatus();                    // Show turret status
